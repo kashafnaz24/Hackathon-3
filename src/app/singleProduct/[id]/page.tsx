@@ -1,7 +1,6 @@
 import { client } from "@/sanity/lib/client";
 import ProductDetailClient from "@/app/component/productDetail";
 
-
 async function getProduct(id: string) {
   return await client.fetch(`*[_type == "products" && _id == $id][0]`, { id });
 }
@@ -13,7 +12,5 @@ export default async function ProductDetail({ params }: { params: { id: string }
     return <p className="text-center text-red-500">Product not found!</p>;
   }
 
-  return (
-    <ProductDetailClient product={product} />
-  );
+  return <ProductDetailClient product={product} />;
 }
