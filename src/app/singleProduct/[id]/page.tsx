@@ -1,14 +1,5 @@
-
-import imageUrlBuilder from "@sanity/image-url";
-import { client } from "../../../sanity/lib/client";
+import { client } from "@/sanity/lib/client";
 import ProductDetailClient from "@/app/component/productDetail";
-
-
-const builder = imageUrlBuilder(client);
-
-export function urlFor(source:string) {
-  return builder.image(source).url();
-}
 
 
 async function getProduct(id: string) {
@@ -16,8 +7,7 @@ async function getProduct(id: string) {
 }
 
 export default async function ProductDetail({ params }: { params: { id: string } }) {
-  const resolvedParams = await params;
-  const product = await getProduct(resolvedParams .id);
+  const product = await getProduct(params.id);
 
   if (!product) {
     return <p className="text-center text-red-500">Product not found!</p>;

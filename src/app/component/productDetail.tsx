@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useCart } from "@/app/context/CartContext";
-import { urlFor } from "../singleProduct/[id]/page";
+import { urlFor } from "@/utils/image";
 import Product from "@/app/product/page";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; 
