@@ -5,7 +5,11 @@ async function getProduct(id: string) {
   return await client.fetch(`*[_type == "products" && _id == $id][0]`, { id });
 }
 
-export default async function ProductDetail({ params }: { params: { id: string } }) {
+interface ProductDetailProps {
+  params: { id: string };
+}
+
+export default async function ProductDetail({ params }: ProductDetailProps) {  
   const product = await getProduct(params.id);
 
   if (!product) {
