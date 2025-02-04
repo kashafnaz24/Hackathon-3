@@ -54,7 +54,14 @@ export default function Header(){
                     <button className='flex gap-2 bg-[#FFFFFF] py-[10px] px-[12px] text-[#272343] border-none rounded-[6px] w-[120px] h-[44px] '>
                         <FontAwesomeIcon icon={faCartShopping} className='w-[22px] h-[22px]'/> 
                         cart
-                        <img src="/No.png" alt="no icon" className='w-[22px] h-[22px]'/>
+                        <Image
+                        src="/No.png"
+                        alt="no icon"
+                        className="w-[22px] h-[22px]"
+                        width={22}
+                        height={22}
+                        priority
+                        />
                     </button>
                     </Link>
                 </div>
