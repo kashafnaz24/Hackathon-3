@@ -5,12 +5,18 @@ async function getProduct(id: string) {
   return client.fetch(`*[_type == "products" && _id == $id][0]`, { id });
 }
 
-interface ProductDetailProps {
+type PageProps = {
   params: { id: string };
-}
+};
 
-export default async function ProductDetail({ params }: ProductDetailProps) {  
+const ProductDetail = async ({ params }: PageProps) => {  
   const product = await getProduct(params.id);
 
-  return product ? <ProductDetailClient product={product} /> : <p className="text-center text-red-500">Product not found!</p>;
-}
+  if (!product) {
+    return <p className="text-center text-red-500">Product not found!</p>;
+  }
+
+  return <ProductDetailClient product={product} />;
+};
+
+export default ProductDetail;
