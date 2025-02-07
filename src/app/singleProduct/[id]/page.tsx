@@ -1,22 +1,29 @@
 import { client } from "@/sanity/lib/client";
 import ProductDetailClient from "@/app/component/productDetail";
 
-async function getProduct(id: string) {
-  return client.fetch(`*[_type == "products" && _id == $id][0]`, { id });
-}
-
-type PageProps = {
-  params: { id: string };
-};
-
-const ProductDetail = async ({ params }: PageProps) => {  
-  const product = await getProduct(params.id);
-
-  if (!product) {
-    return <p className="text-center text-red-500">Product not found!</p>;
+const ProductDetailPage = async ({ params }: { params: { id: string } }) => {
+  async function getProduct(id: string) {
+    try {
+      return await client.fetch(`*[_type == "products" && _id == $id][0]`, { id });
+    } catch (error) {
+      console.error("Error fetching product:", error);
+      return null;
+    }
   }
 
-  return <ProductDetailClient product={product} />;
+  try {
+    const product = await getProduct(params.id);
+
+    if (!product) {
+      return <p className="text-center text-red-500">Product not found!</p>;
+    }
+
+    return <ProductDetailClient product={product} />;
+  } catch (error) {
+    console.error("Error rendering product detail page:", error);
+    return <p className="text-center text-red-500">Something went wrong!</p>;
+  }
 };
 
-export default ProductDetail;
+export default ProductDetailPage;
+

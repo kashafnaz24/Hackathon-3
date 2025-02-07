@@ -24,7 +24,7 @@ export default function Header(){
                             priority
                             />
                             </li>
-                        <li><Link href="/Faq">Faqs</Link></li>
+                        <li><Link href="/Faqs">Faqs</Link></li>
                         <li className='flex gap-1'>
                             <Image
                              src="/error.svg" 
@@ -50,7 +50,7 @@ export default function Header(){
                     />
                     <h2 className='text-[#272343] text-[26px]'>Comporty</h2>
                     </div>
-                    <Link href="/Cart">
+                    <Link href="/cart">
                     <button className='flex gap-2 bg-[#FFFFFF] py-[10px] px-[12px] text-[#272343] border-none rounded-[6px] w-[120px] h-[44px] '>
                         <FontAwesomeIcon icon={faCartShopping} className='w-[22px] h-[22px]'/> 
                         cart

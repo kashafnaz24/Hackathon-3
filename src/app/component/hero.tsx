@@ -32,51 +32,63 @@ export default function Hero() {
           />
         </div>
       </div>
-      <div className="flex justify-between  mt-[20px] pl-[10px] pr-[10px] h-[139px] w-[90%] xl:w-[70%]  mx-auto">
-        <Image src="/zapeirlogo.webp"
-         alt="companiesLogo"
-         width={85}
-         height={87}
-         priority
-         unoptimized
-         />
-        <Image src="/pepedrive.webp"  
-         alt="companiesLogo"
-         width={107}
-         height={109}
-         priority
-         unoptimized  />
+      <div className="flex justify-between mt-[20px] px-[10px] h-[139px] w-[90%] xl:w-[70%] mx-auto">
+  <Image src="/zapeirlogo.webp"
+    alt="companiesLogo"
+    width={85}
+    height={87}
+    priority
+    className="w-85 h-87"
+  />
+  
+  <Image src="/pepedrive.webp"  
+    alt="companiesLogo"
+    width={107}
+    height={109}
+    priority
+    className="w-107 h-109"
+  />
 
-        <Image src="/cibbanklogo.webp"  
-         alt="companiesLogo"
-         width={135}
-         height={189}
-         priority
-         unoptimized  />
-        <Image src="/logo4.webp" 
-         alt="companiesLogo"
-         width={63}
-         height={63}
-         priority
-         unoptimized />
-        <Image 
-        src="/burntoast.webp" 
-         alt="companiesLogo"
-         width={98}
-         height={101}
-         priority />
-         <Image 
-         src="/panda.webp" 
-         alt="companiesLogo"
-         width={113}
-         height={115}
-         priority />
-         <Image src="/maz.webp" 
-         alt="companiesLogo"
-         width={84}
-         height={87}
-         priority />
-      </div>
+  <Image src="/cibbanklogo.webp"  
+    alt="companiesLogo"
+    width={135}
+    height={189}
+    priority
+    className="w-135 h-189"
+  />
+
+  <Image src="/logo4.webp" 
+    alt="companiesLogo"
+    width={63}
+    height={63}
+    priority
+    className="w-63 h-63"
+  />
+
+  <Image src="/burntoast.webp" 
+    alt="companiesLogo"
+    width={98}
+    height={101}
+    priority
+    className="w-98 h-101"
+  />
+
+  <Image src="/panda.webp" 
+    alt="companiesLogo"
+    width={113}
+    height={115}
+    priority
+    className="w-113 h-115"
+  />
+
+  <Image src="/maz.webp" 
+    alt="companiesLogo"
+    width={84}
+    height={87}
+    priority
+    className="w-84 h-87"
+  />
+</div>
       </div>
 )
 }

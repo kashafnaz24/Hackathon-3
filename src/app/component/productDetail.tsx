@@ -5,8 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useCart } from "@/app/context/CartContext";
 import { urlFor } from "@/utils/image";
-import Product from "@/app/product/page";
-import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; 
 
 export default function ProductDetailClient({ product }: { product: any }) {
@@ -20,11 +18,9 @@ export default function ProductDetailClient({ product }: { product: any }) {
       imageUrl: urlFor(product.image),
       quantity: 1,
     });
+    alert("your product successfully added to your card")
 
-    toast.success(`🛒 "${product.title}" added to cart!`, {
-      position: "top-right",
-      autoClose: 3000, 
-    });
+   
   };
 
   return (
@@ -52,7 +48,6 @@ export default function ProductDetailClient({ product }: { product: any }) {
           </button>
         </div>
       </div>
-      <Product />
     </div>
   );
 }
