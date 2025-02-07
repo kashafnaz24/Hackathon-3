@@ -68,7 +68,7 @@ export default function About(){
     <div className='flex gap-2'>
     <div className="w-[250px] h-[377px] ">
       <Image
-        src="/top3.png"
+        src="/top3.webp"
         alt="Featured Products chairs"
         width={250}
         height={312}
@@ -90,7 +90,7 @@ export default function About(){
     </div>
     <div className="w-[250px] h-[377px] ">
       <Image
-        src="/chair4.png"
+        src="/chair4.webp"
         alt="Featured Products chairs"
         width={250}
         height={312}
